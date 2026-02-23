@@ -1,0 +1,22 @@
+/**
+ * Snippet Title: Bottom margin fix for lists
+ * Scope:         course
+ * Goal:          bugfix
+ * Description:   Fixes https://moodle.atlassian.net/browse/MDL-88044 by re-applying margins at the bottom of activity lists, and removing it only for nested lists.
+ * Creator:       Pierre Camaly de Brosses
+ * Tested on:     Moodle 4.5, 5.2, Firefox, Chrome and Safari
+ *
+ * @copyright     2026 University of Exeter
+ * @author        Pierre Camaly de Brosses <p.de-brosses2@exeter.ac.uk>
+ * @license       http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+.activity {
+  ul, ol {
+    margin-bottom: 1rem;
+  }
+
+  ul ul, ul ol, ol ul, ol ol {
+    margin-bottom: 0;
+  }
+}
